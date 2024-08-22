@@ -1,0 +1,42 @@
+header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 320px;
+  height: 102px;
+  width: 100%;
+  max-width: 1920px;
+  background-color: #F2E9D8;
+  z-index: 100;
+}
+
+.logo {
+  flex: 3;
+}
+
+.navbar {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar ul {
+  flex: 1;
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  padding: 0;
+}
+
+.navbar ul li a {
+  line-height: 20px;
+  color: #000;
+  text-decoration: none;
+}
+
+.navbar .download-button {
+  flex: 1;
+}
+
+

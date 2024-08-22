@@ -1,0 +1,40 @@
+
+footer {
+  max-width: 1920px;
+  height: 160px;
+  display: flex;
+  align-content: space-between;
+  justify-content: center;
+}
+
+.blog-icon {
+  width: 24px;
+  height: 24px;
+
+}
+.logo-box {
+  flex: 2;
+  margin-top: 45px;
+}
+.icon-box span {
+  display: inline-block;
+  width: 42px;
+  height: 42px;
+  border-radius: 100px;
+  background: rgba(242, 157, 82, 1);
+  text-align: center;
+  line-height: 40px;
+  font-size: 24px;
+  color: #FFFFFF;
+  font-weight: 700;
+}
+
+.icon-box {
+  flex: 1;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  vertical-align : middle;
+  text-align: center;
+  margin-top: 45px;
+}
