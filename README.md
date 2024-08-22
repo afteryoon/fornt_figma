@@ -15,9 +15,9 @@
   ```mermaid
 		graph TD
   A[페이지 접속] --> B{대문페이지}
-  B --> |loadHTML| C[헤더페이지]
-  B --> |loadHTML| C[메인페이지]
-  B --> |loadHTML| C[푸터페이지]
+  B <-- |loadHTML| C[헤더페이지]
+  B <-- |loadHTML| D[메인페이지]
+  B <-- |loadHTML| F[푸터페이지]
   
   ```
 
@@ -31,19 +31,21 @@
 - 정규식을 활용하여 1차적인 email 유효성 검사를 진행합니다.
 
   ```mermaid
-		stateDiagram-v2
-	    [페이지 접속] --> 페이지 파싱
-	    좌표값 확인 --> 지도 호출
-	    지도 호출 --> 마커생성
-	    마커생성 --> 지도파싱
-	    지도파싱 --> [성공]
+		sequenceDiagram
+	    client->>+kakaoAPI: 주소정보요청(adress)
+	    kakaoAPI->>+client: 주소정보응답(resolve)
+	    client-->>-kakaoAPI: 좌표지점의지도요청(x,y)
+      kakaoAPI->>+client: 해당지도파싱(map)
+      client-->>-kakaoAPI: 마킹요청(x,y)
+      kakaoAPI->>+client: 마킹반환(map)
 ```
   ```mermaid
 		stateDiagram-v2
-	    [이벤트 감지] --> 이벤트 확인
-	    이벤트 확인 --> 요소 확인
-	    요소 확인 --> 기능 동작
-	    기능 동작 --> [성공]
+      [*]  --> 이벤트_감지
+	    이벤트_감지 --> 요소_확인
+	    요소_확인 --> 기능_동작
+	    기능_동작 --> 성공
+	    성공 --> [*]
 ```
 
 ## 화면
