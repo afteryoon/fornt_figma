@@ -15,9 +15,9 @@
   ```mermaid
 		graph TD
   A[페이지 접속] --> B{대문페이지}
-  B <-- |loadHTML| C[헤더페이지]
-  B <-- |loadHTML| D[메인페이지]
-  B <-- |loadHTML| F[푸터페이지]
+  B --> |loadHTML| C[헤더페이지]
+  B --> |loadHTML| D[메인페이지]
+  B --> |loadHTML| F[푸터페이지]
   
   ```
 
@@ -38,7 +38,8 @@
       kakaoAPI->>+client: 해당지도파싱(map)
       client-->>-kakaoAPI: 마킹요청(x,y)
       kakaoAPI->>+client: 마킹반환(map)
-```
+  ```
+  
   ```mermaid
 		stateDiagram-v2
       [*]  --> 이벤트_감지
@@ -46,7 +47,7 @@
 	    요소_확인 --> 기능_동작
 	    기능_동작 --> 성공
 	    성공 --> [*]
-```
+  ```
 
 ## 화면
 
