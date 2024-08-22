@@ -49,7 +49,6 @@ const getCoordinatesByAddress = (address) => {
     // 주소로 좌표를 검색
     geocoder.addressSearch(address, (result, status) => {
       if (status === kakao.maps.services.Status.OK) {
-        console.log(result);
         resolve({
           x: result[0].x, // 경도
           y: result[0].y  // 위도
@@ -106,8 +105,6 @@ const isValidEmail = (email) => {
 window.addEventListener('scroll', () => {
 
   const scroll_top_btn = document.querySelector('#scroll_top_btn');
-  // console.log(scrollY);
-  console.log(document.querySelector('#scroll_top_btn').style.visibility);
   if (window.scrollY > 1) {
     scroll_top_btn.style.visibility="visible";
   } else {
@@ -115,9 +112,37 @@ window.addEventListener('scroll', () => {
   }
 });
 
+//성능을 고려한 쓰로틀링을 사용하였지만 limit 시간을 줄여봐도 원활이 작동이 되지 않음 //추후 리펙토링 시 확인
+// const throttle =(func, limit) => {
+//   let inThrottle;
+//   return function() {
+//     const args = arguments;
+//     const context = this;
+//     //console.log(inThrottle);
+//     if (!inThrottle) {
+//       func.apply(context, args);
+//       inThrottle = true;
+//       setTimeout(() => inThrottle = false, limit);
+//     }
+//   }
+// }
+//
+// const handleScroll = () => {
+//   const scrollTopBtn = document.querySelector('#scroll_top_btn');
+//   console.log(scrollTopBtn.style.visibility);
+//   console.log(window.scrollY);
+//   if (window.scrollY > 100) {
+//     scrollTopBtn.style.visibility = "visible";
+//   } else {
+//     scrollTopBtn.style.visibility = "hidden";
+//   }
+// }
+//
+// window.addEventListener('scroll', throttle(handleScroll, 200));
+
 const toTop = () => {
   window.scrollTo({
     top: 0
-    // , behavior: 'smooth'
+     , behavior: 'smooth'
   });
 };

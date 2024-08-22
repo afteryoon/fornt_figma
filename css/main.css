@@ -287,26 +287,12 @@ hr {
   background-color: #c56745;
 }
 
-/*.background-image {*/
-/*  width: 1920px;*/
-/*  height: 340px;*/
-/*  background: rgba(242, 233, 216, 0.6);*/
-/*  !*position: ;*!*/
-/*}*/
 
 .subscribe-div {
   position: relative;
   z-index: 1;
 }
 
-.background-image {
-  display: none;
-  position: absolute;
-  height: 340px;
-  width: 1920px;
-  top: 3819px;
-  z-index: 1;
-}
 
 #modal {
   display: none;
@@ -371,4 +357,23 @@ dialog#modal[open] {
   opacity: 1;
 }
 
+/*.background-image {*/
+/*  width: 1920px;*/
+/*  height: 340px;*/
+/*  background: rgba(242, 233, 216, 0.6);*/
+/*  !*position: ;*!*/
+/*}*/
 
+
+.background-cat {
+  /*display: none;*/
+  /*position: absolute;*/
+  background-image: url("../img/img_5.png");
+  background-size:auto;
+  background-position: center;
+
+  height: 340px;
+  width: 1920px;
+  top: 3819px;
+  z-index: 1;
+}
