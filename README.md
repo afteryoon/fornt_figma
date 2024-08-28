@@ -24,7 +24,7 @@
 
 ## 배포
 - vercel을 사용한 배포
-- https://front-figma-4zw0189rm-yoons-projects-799152d4.vercel.app/
+- [https://front-figma-4zw0189rm-yoons-projects-799152d4.vercel.app/](https://front-figma-pi.vercel.app/)
 
 ## 기능
 - 주소값을 받아 좌표값을 받아오는 api, 좌표값을 기반으로 지도와, 마커를 생성
@@ -84,8 +84,6 @@
  - 해결 -> 이벤트를 위임하여 이벤트가 발생한 타겟과 매치하여 맞을 때 감지하도록 함수 구현
 -문제 -> 스크롤시 마다 이벤트를 감지해야하기 때문에 성능적으로 좋지 않음
  - 미해결 ->  쓰로틀링을 사용하였지만 limit 시간을 줄여봐도 원활히 작동이 되지 않는 상황
--문제 -> vercel로 배포 하였지만 해당 페이지에서 api 호출 에러 발생
--   미해결 -> env 파일 등록, kakao 플렛폼에 url 추가 및 여러 시도하였지만 실패
 -문제 -> css 및 html 자체의 부족한 실력으로 똑같이 구현하지 못함 
  - 미해결 -> 앞으로 더 많은 노력이 필요함을 느낌
 
