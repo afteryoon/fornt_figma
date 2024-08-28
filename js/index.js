@@ -7,7 +7,6 @@ window.onload = async () => {
 
     let address = '제주특별자치도 제주시 첨단로 330';
     const coordinates = await getCoordinatesByAddress(address);
-    //console.log(coordinates);
     initMap(coordinates.x, coordinates.y);
 
   } catch (error) {
@@ -16,7 +15,7 @@ window.onload = async () => {
 }
 
 const loadHTML = (id, filename) => {
-  fetch(filename)
+  return fetch(filename)
     .then(response => response.text())
     .then(data => {
       document.getElementById(id).innerHTML = data;
@@ -131,7 +130,7 @@ window.addEventListener('scroll', () => {
 //   const scrollTopBtn = document.querySelector('#scroll_top_btn');
 //   console.log(scrollTopBtn.style.visibility);
 //   console.log(window.scrollY);
-//   if (window.scrollY > 100) {
+//   if (window.scrollY > 1) {
 //     scrollTopBtn.style.visibility = "visible";
 //   } else {
 //     scrollTopBtn.style.visibility = "hidden";
